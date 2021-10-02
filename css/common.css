@@ -22,6 +22,10 @@ input{
 .fr{
     float: right;
 }
+.bx{
+    width: 1000px;
+    margin: 0 auto;
+}
 
 /* 样式 */
 .index_nav{
@@ -30,6 +34,11 @@ input{
     height: 74px;
     background: url(./../img/logonew.png) no-repeat left center;
     background-size: 133px;
+}
+.index_nav .logo_back{
+    float: left;
+    width: 150px;
+    height: 74px;
 }
 .index_nav .nav_list{
     padding-left: 200px;
