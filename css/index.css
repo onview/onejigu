@@ -1,12 +1,16 @@
+h2 {
+  line-height: 66px;
+  font-size: 20px;
+}
+
+.index_nav .nav_list li:nth-child(1) a {
+  color: #f92929;
+}
+
 .hot_shiyong {
   width: 1000px;
   margin: 0 auto;
   position: relative;
-}
-
-.hot_shiyong h2 {
-  line-height: 66px;
-  font-size: 20px;
 }
 
 .hot_shiyong .lbt {
@@ -117,4 +121,107 @@
 .hot_shiyong .next {
   background: url(./img/next.png) no-repeat;
   right: -45px;
+}
+
+.baogao_jx {
+  margin-top: 25px;
+  background-color: #f7f7f7;
+}
+
+.baogao_jx li {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.daogou_jx {
+  padding-bottom: 45px;
+}
+
+.daogou_jx li {
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.daogou_jx li img:last-child {
+  position: absolute;
+  bottom: -15px;
+}
+
+.faxian_kuwan {
+  background-color: #f7f7f7;
+}
+
+.faxian_kuwan li > span {
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+.faxian_kuwan .jx_list li {
+  background-color: #fff;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.faxian_kuwan .jx_list li > p {
+  height: 17px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #999;
+}
+
+.faxian_kuwan .jx_list div > span:nth-child(1) {
+  font-size: 13px;
+  color: #fb7898;
+}
+
+.jx_list {
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.jx_list li {
+  width: 220px;
+  float: left;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.jx_list li img:nth-child(1) {
+  cursor: pointer;
+  width: 220px;
+  height: 130px;
+  margin-bottom: 12px;
+}
+
+.jx_list li p {
+  height: 34px;
+  font-size: 13px;
+  padding: 0 5px 0 10px;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.jx_list li div {
+  padding: 0 10px;
+  font-size: 12px;
+  color: #989898;
+}
+
+.jx_list li div > span:nth-child(2) {
+  float: right;
+}
+
+.jx_list li div > span:nth-child(2) span:nth-child(1) {
+  padding-left: 15px;
+  background: url(./img/xin.png) no-repeat 0 center;
+}
+
+.jx_list li div > span:nth-child(2) span:nth-child(2) {
+  padding-left: 15px;
+  background: url(./img/reply.png) no-repeat 0 center;
+}
+
+.jx_list li:not(li:nth-child(4n)) {
+  margin-right: 37px;
 }
