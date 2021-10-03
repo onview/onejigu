@@ -1,11 +1,15 @@
+h2{
+    line-height: 66px;
+    font-size: 20px;
+}
+.index_nav .nav_list li:nth-child(1) a{
+    color: #f92929;
+}
+// 热门试用
 .hot_shiyong{
     width: 1000px;
     margin: 0 auto;
     position: relative;
-    h2{
-        line-height: 66px;
-        font-size: 20px;
-    }
     .lbt{
         width: 1000px;
         overflow: hidden;
@@ -99,5 +103,98 @@
     .next{
         background: url(./img/next.png) no-repeat;
         right: -45px;
+    }
+}
+
+// 报告精选
+.baogao_jx{
+    margin-top: 25px;
+    background-color: #f7f7f7;
+    li{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+    }
+}
+
+// 导购精选
+.daogou_jx{
+    padding-bottom: 45px;
+    li{
+        position: relative;
+        padding-bottom: 15px;
+        img:last-child{
+            position: absolute;
+            bottom: -15px;
+        }
+    }
+}
+
+// 发现酷玩
+.faxian_kuwan{
+    background-color: #f7f7f7;
+    li>span{
+        padding: 0 10px;
+        font-size: 13px;
+    }
+    .jx_list{
+        li{
+            background-color: #fff;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        li>p{
+            height: 17px;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #999;
+        }
+        div>span:nth-child(1){
+            font-size: 13px;
+            color: #fb7898;
+        }
+    }
+}
+
+.jx_list{
+    overflow: hidden;
+    padding-bottom: 20px;
+    li{
+        width: 220px;
+        float: left;
+        border: 1px solid #eaeaea;
+        border-radius: 5px;
+        background-color: #fff;
+        img:nth-child(1){
+            cursor: pointer;
+            width: 220px;
+            height: 130px;
+            margin-bottom: 12px;
+        }
+        p{
+            height: 34px;
+            font-size: 13px;
+            padding: 0 5px 0 10px;
+            margin-bottom:25px;
+            color: #444;
+        }
+        div{
+            padding: 0 10px;
+            font-size: 12px;
+            color: #989898;
+        }
+        div>span:nth-child(2){
+            float: right;
+            span:nth-child(1){
+                padding-left: 15px;
+                background: url(./img/xin.png) no-repeat 0 center;
+            }
+            span:nth-child(2){
+                padding-left: 15px;
+                background: url(./img/reply.png) no-repeat 0 center;
+            }
+        }
+    }
+    li:not(li:nth-child(4n)){
+        margin-right: 37px;
     }
 }

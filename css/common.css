@@ -16,6 +16,9 @@ input{
     height: 0;
     clear: both;
 }
+button{
+    cursor: pointer;
+}
 .fl{
     float: left;
 }
@@ -28,6 +31,149 @@ input{
 }
 
 /* 样式 */
+
+
+/* 登录窗口 */
+.wrap{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .4);
+    z-index: 99;
+
+    display: none;
+}
+.login_{
+    width: 715px;
+    height: 321px;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 99;
+    padding: 25px 50px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    border-bottom: 5px solid #fe584d;
+}
+.login_ .close_{
+    width: 24px;
+    height: 24px;
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+.login_ .login_left{
+    color: #595959;
+    width: 340px;
+}
+.login_ .login_left a{
+    color: #595959;
+}
+.login_ .login_left h3{
+    font-size: 18px;
+    color: #595959;
+    margin-bottom: 25px;
+}
+.login_ .login_left div{
+    position: relative;
+}
+.login_ .login_left div:nth-child(2) input,
+.login_ .login_left div:nth-child(3) input{
+    color: #757575;
+    width: 340px;
+    height: 44px;
+    padding: 8px 0 8px 36px;
+    box-sizing: border-box;
+    border: 1px solid #d9d9d9;
+}
+.login_ .login_left div:nth-child(3){
+    margin: 10px 0 20px;
+}
+.login_ .login_left div:nth-child(2) span,
+.login_ .login_left div:nth-child(3) span{
+    position: absolute;
+    width: 13px;
+    height: 20px;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.login_ .login_left div:nth-child(2) span{
+    background: url(./../css/img/icon-global.png) -486px -2px;
+}
+.login_ .login_left div:nth-child(3) span{
+    background: url(./../css/img/icon-global.png) -485px -37px;
+}
+.login_ .login_left div:nth-child(4){
+    font-size: 12px;
+    line-height: 40px; 
+    margin-bottom: 25px;
+}
+.login_ .login_left div:nth-child(4) button{
+    float: right;
+    width: 145px;
+    color: #fff;
+    height: 40px;
+    background-color: #fe584d;
+    border: none;
+    border-radius: 18px;
+}
+.login_ .login_left div:nth-child(5){
+    font-size: 12px;
+}
+.login_ .login_left div:nth-child(5) span:nth-child(2){
+    float: right ;
+}
+.login_ .l_line{
+    float: left;
+    width: 1px;
+    height: 255px;
+    background-color: #ededed;
+    margin-left: 55px;
+}
+.login_ .login_right{
+    width: 180px;
+    text-align: center;
+}
+.login_ .login_right p{
+    color: #595995;
+    margin-bottom: 28px;
+}
+.login_ .login_right>div{
+    position: relative;
+    margin-top: 18px;
+}
+.login_ .login_right>div div{
+    position: absolute;
+    width: 1px;
+    height: 17px;
+    background-color: #e0e0e0;
+    left: 50%;
+    top: 3px;
+}
+.login_ .login_right>div .l_r_tubiao{
+    float: left;
+    padding-left: 20px;
+    color: #808080;
+}
+.login_ .login_right>div .l_r_tubiao span{
+    float: left;
+    width: 30px;
+    height: 22px;
+    margin-top: 3px;
+}
+.login_ .login_right>div .weibo span{
+    background: url(./../css/img/icon-global.png) no-repeat -477px -150px;
+}
+.login_ .login_right>div .qq span{
+    background: url(./../css/img/icon-global.png) no-repeat -480px -188px;
+}
+
+/* 主页导航 */
 .index_nav{
     width: 1000px;
     margin: 0 auto;
@@ -52,9 +198,7 @@ input{
 .index_nav .nav_list li a{
     color: #333;
 }
-.index_nav .nav_list li:nth-child(1) a{
-    color: #f92929;
-}
+
 .index_nav .nav_list li a:hover{
     color: #f92929;
 }
@@ -77,6 +221,7 @@ input{
     border-radius: 5px;
     margin-top: 20px;
     margin-left: 5px;
+    cursor: pointer;
 }
 .index_nav a{
     color: #ff3a4f;
@@ -138,6 +283,9 @@ input{
         transform: translate(280px,-260px);
     }
 }
+
+
+
 
 /* 最底部信息部分 */
 .footer{
