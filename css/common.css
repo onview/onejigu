@@ -28,6 +28,7 @@ button{
 .bx{
     width: 1000px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 /* 样式 */
@@ -178,7 +179,7 @@ button{
     width: 1000px;
     margin: 0 auto;
     height: 74px;
-    background: url(./../img/logonew.png) no-repeat left center;
+    background: #fff url(./../img/logonew.png) no-repeat left center;
     background-size: 133px;
 }
 .index_nav .logo_back{

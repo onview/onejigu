@@ -1,3 +1,151 @@
 .index_nav .nav_list li:nth-child(2) a{
     color: #f92929;
 }
+h1{
+    font-size: 40px;
+    color: #333;
+    text-align: center;
+    height: 135px;
+    line-height: 135px;
+}
+.other_nav{
+    width: 405px;
+    margin: 0 auto;
+    overflow: hidden;
+    li{
+        width: 135px;
+        text-align: center;
+        float: left;
+        padding-bottom: 15px;
+        a{
+            color: #999;
+        }
+    }
+}
+.kuwan{
+    background-color: #f7f7f7;
+    padding-bottom: 50px;
+
+    #kw_hot_list{
+        overflow: hidden;
+        padding-top: 25px;
+        padding-bottom: 20px;
+        li{
+            width: 220px;
+            float: left;
+            border: 1px solid #e8e8e8;
+            border-radius: 5px;
+            overflow: hidden;
+            background-color: #fff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            img{
+                cursor: pointer;
+                width: 220px;
+                height: 130px;
+            }
+        }
+        li>div{
+            padding: 10px;
+            font-size: 12px;
+            >span{
+                color: #444;
+                font-size: 14px;
+                display: block;
+                height: 39px;
+            }
+            p{
+                font-size: 12px;
+                margin-bottom:25px;
+                color: #999;
+            }
+            div{
+                color: #989898;
+            }
+            div>span:nth-child(1){
+                color: #ff4c31;
+                font-size: 14px;
+            }
+            div>span:nth-child(2){
+                float: right;
+                span:nth-child(1){
+                    padding-left: 15px;
+                    background: url(./../../css/img/xin.png) no-repeat 0 center;
+                }
+                span:nth-child(2){
+                    padding-left: 15px;
+                    background: url(./../../css/img/reply.png) no-repeat 0 center;
+                }
+            }
+        }
+        li:not(li:nth-child(4n)){
+            margin-right: 37px;
+        }
+    }
+
+    // 点击加载更多
+    #click_more{
+        height: 30px;
+        line-height: 20px;
+        text-align: center;
+        color: #f73c43;
+        cursor: pointer;
+        span{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            background: url(./../../css/img/more.png) no-repeat bottom center;
+        }
+    }
+}
+
+// 主要内容   // 分类界面的样式
+.pl_wrap{
+    background-color: #f7f7f7;
+    padding: 25px 0 5px;
+    .pl_list{
+        background-color: #fff;
+        padding-top: 20px;  
+        font-size: 12px;
+        color: #999;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        h5{
+            height: 25px;
+            line-height: 25px;
+            font-size: 16px;
+            font-weight: 400;
+            padding-left: 30px;
+            border-left: 5px solid #fa5444;
+            color: #333;
+        }
+        .tb_list{
+            margin-top: 35px;
+            padding-left: 30px;
+            overflow: hidden;
+            border-bottom: 1px dashed #e4e4e4;
+            li{
+                width: 120px;
+                float: left;
+                text-align: center;
+                margin-right: 40px;
+                p{
+                    margin: 5px 0 22px;
+                    padding-left: 10px;
+                }
+            }
+        }
+        .m_list{
+            overflow: hidden;
+            padding: 16px 0 20px 30px;
+            li{
+                width: 120px;
+                text-align: center;
+                float: left;
+                margin-right: 40px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

@@ -7,7 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/common.css">
     <link rel="stylesheet" href="./css/play.min.css">
-    <title>发现酷玩</title>
+    <title>发现酷玩-最新</title>
+    <style>
+        .other_nav li:nth-child(1) {
+            border-bottom: 4px solid #fe5631;
+        }
+
+        .other_nav li:nth-child(1) a {
+            color: #fe5631;
+        }
+    </style>
 </head>
 
 <body>
@@ -52,10 +61,137 @@
             <li><a href="./../report/report_index.html">报告</a></li>
         </ul>
         <span class="reg"><a href="./../regist.html">注册</a></span>
-        <span class="login"  id="login_"><a href="javascript:;">登录</a></span>
+        <span class="login" id="login_"><a href="javascript:;">登录</a></span>
         <span class="search"></span>
     </div>
     <div class="nav_b_line"></div>
+
+    <h1>发现酷玩</h1>
+    <ul class="other_nav">
+        <li><a href="./play_index.html">最新</a></li>
+        <li><a href="./play_hot.html">最热</a></li>
+        <li><a href="./play_pinlei.html">品类</a></li>
+    </ul>
+    <div class="kuwan">
+        <div class="bx">
+            <ul id="kw_hot_list">
+                <!-- <li>
+                    <img src="./../img/k1.jpg" alt="">
+                    <div>
+                        <span>SCiO 微型光谱仪</span>
+                        <p>可以预测食物成分及营养</p>
+                        <div>
+                            <span>￥1212</span>
+                            <span>
+                                <span>3</span>
+                                <span>3</span>
+                            </span>
+                        </div>
+                    </div>
+                </li> -->
+            </ul>
+            <div id="click_more"><span id="loading_icon"></span>点击加载更多</div>
+        </div>
+    </div>
+
+    <!-- 最底部信息部分 -->
+    <div class="footer">
+        <div class="ft_bx">
+            <div class="erweima"></div>
+            <div class="jiguo">
+                <img src="./../img/logoImg.jpg" alt="">
+                <p>全球酷玩试用导购平台酷·新奇·好玩·品质</p>
+                <p>微信添加"JguoJguo"获取我们的服务。</p>
+            </div>
+            <p class="banquan">&copy; 2016极果版权所有</p>
+        </div>
+        <dl>
+            <dt>免费试用</dt>
+            <dd>试用流程</dd>
+            <dd>如何提高成功率</dd>
+        </dl>
+        <dl>
+            <dt>友情链接</dt>
+            <dd>智东西</dd>
+            <dd>WEIBUSI</dd>
+            <dd>搜狐IT</dd>
+            <dd>腾讯科技</dd>
+            <dd>搜狐数码</dd>
+            <dd>凤凰科技</dd>
+            <dd>凤凰数码</dd>
+            <dd>PConline</dd>
+            <dd>泡泡网</dd>
+            <dd>3W咖啡</dd>
+            <dd>ZUK社区</dd>
+            <dd>亿觅emie</dd>
+            <dd>极客公园</dd>
+            <dd>易迅易启玩</dd>
+            <dd>果库</dd>
+        </dl>
+        <dl>
+            <dt>购买攻略</dt>
+            <dd>美亚海淘教程</dd>
+            <dd>日亚海淘教程</dd>
+            <dd>海淘转运攻略</dd>
+            <dd>kickstarter 众筹购买攻略</dd>
+            <dd>indiegogo 众筹购买攻略</dd>
+        </dl>
+        <dl>
+            <dt>厂商合作</dt>
+            <dd>关于极果</dd>
+            <dd>联系我们</dd>
+            <dd>商务合作：BD@jiguo.com</dd>
+            <dd>CEO邮箱：CEO@jiguo.com</dd>
+        </dl>
+    </div>
+
 </body>
 <script src="./../js/idnex1.js"></script>
+<script id="one" type="text/html">
+        {{each value}}
+        <li>
+            <img src="{{$value.img}}" alt="">
+            <div>
+                <span>{{$value.text}}</span>
+                <p>{{$value.description}}</p>
+                <div>
+                    <span>{{$value.price}}</span>
+                    <span>
+                        <span>{{$value.like}}</span>
+                        <span>{{$value.words}}</span>
+                    </span>
+                </div>
+            </div>
+        </li>
+        {{/each}}
+    </script>
+
+<script src="./../js/template-web.js"></script>
+<script>
+    var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
+    oajax.open('get', 'http://192.168.0.104:3000/play/new', true);
+    oajax.send();
+    oajax.onreadystatechange = function () {
+        // console.log(oajax.readyState);
+        if (oajax.readyState == 4) {
+            if (oajax.status == 200) {
+                var res = JSON.parse(oajax.responseText);
+                // console.log(res);
+                render_html(res);
+            } else {
+                console.log('获取失败');
+            }
+        }
+    }
+
+    function render_html(res) {
+        // console.log(res);
+
+        var html = template('one', {
+            value: res[0]
+        });
+        document.getElementById('kw_hot_list').innerHTML = html;
+    }
+</script><script src="./../js/jiazai_more.js"></script>
+
 </html>
