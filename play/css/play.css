@@ -6,6 +6,7 @@ h1 {
   font-size: 40px;
   color: #333;
   text-align: center;
+  font-weight: 400;
   height: 135px;
   line-height: 135px;
 }
@@ -14,6 +15,7 @@ h1 {
   width: 405px;
   margin: 0 auto;
   overflow: hidden;
+  color: #999;
 }
 
 .other_nav li {
@@ -21,24 +23,20 @@ h1 {
   text-align: center;
   float: left;
   padding-bottom: 15px;
-}
-
-.other_nav li a {
-  color: #999;
+  cursor: pointer;
 }
 
 .kuwan {
   background-color: #f7f7f7;
-  padding-bottom: 50px;
 }
 
-.kuwan #kw_hot_list {
+.kuwan .kw_list {
   overflow: hidden;
   padding-top: 25px;
   padding-bottom: 20px;
 }
 
-.kuwan #kw_hot_list li {
+.kuwan .kw_list li {
   width: 220px;
   float: left;
   border: 1px solid #e8e8e8;
@@ -49,54 +47,54 @@ h1 {
   margin-bottom: 20px;
 }
 
-.kuwan #kw_hot_list li img {
+.kuwan .kw_list li img {
   cursor: pointer;
   width: 220px;
   height: 130px;
 }
 
-.kuwan #kw_hot_list li > div {
+.kuwan .kw_list li > div {
   padding: 10px;
   font-size: 12px;
 }
 
-.kuwan #kw_hot_list li > div > span {
+.kuwan .kw_list li > div > span {
   color: #444;
   font-size: 14px;
   display: block;
   height: 39px;
 }
 
-.kuwan #kw_hot_list li > div p {
+.kuwan .kw_list li > div p {
   font-size: 12px;
   margin-bottom: 25px;
   color: #999;
 }
 
-.kuwan #kw_hot_list li > div div {
+.kuwan .kw_list li > div div {
   color: #989898;
 }
 
-.kuwan #kw_hot_list li > div div > span:nth-child(1) {
+.kuwan .kw_list li > div div > span:nth-child(1) {
   color: #ff4c31;
   font-size: 14px;
 }
 
-.kuwan #kw_hot_list li > div div > span:nth-child(2) {
+.kuwan .kw_list li > div div > span:nth-child(2) {
   float: right;
 }
 
-.kuwan #kw_hot_list li > div div > span:nth-child(2) span:nth-child(1) {
+.kuwan .kw_list li > div div > span:nth-child(2) span:nth-child(1) {
   padding-left: 15px;
   background: url(./../../css/img/xin.png) no-repeat 0 center;
 }
 
-.kuwan #kw_hot_list li > div div > span:nth-child(2) span:nth-child(2) {
+.kuwan .kw_list li > div div > span:nth-child(2) span:nth-child(2) {
   padding-left: 15px;
   background: url(./../../css/img/reply.png) no-repeat 0 center;
 }
 
-.kuwan #kw_hot_list li:not(li:nth-child(4n)) {
+.kuwan .kw_list li:not(li:nth-child(4n)) {
   margin-right: 37px;
 }
 
@@ -106,6 +104,7 @@ h1 {
   text-align: center;
   color: #f73c43;
   cursor: pointer;
+  margin-bottom: 50px;
 }
 
 .kuwan #click_more span {
@@ -116,12 +115,12 @@ h1 {
   background: url(./../../css/img/more.png) no-repeat bottom center;
 }
 
-.pl_wrap {
+.kuwan .pl_wrap {
   background-color: #f7f7f7;
   padding: 25px 0 5px;
 }
 
-.pl_wrap .pl_list {
+.kuwan .pl_wrap .pl_list {
   background-color: #fff;
   padding-top: 20px;
   font-size: 12px;
@@ -130,7 +129,7 @@ h1 {
   border-radius: 5px;
 }
 
-.pl_wrap .pl_list h5 {
+.kuwan .pl_wrap .pl_list h5 {
   height: 25px;
   line-height: 25px;
   font-size: 16px;
@@ -140,34 +139,59 @@ h1 {
   color: #333;
 }
 
-.pl_wrap .pl_list .tb_list {
+.kuwan .pl_wrap .pl_list .tb_list {
   margin-top: 35px;
   padding-left: 30px;
   overflow: hidden;
   border-bottom: 1px dashed #e4e4e4;
 }
 
-.pl_wrap .pl_list .tb_list li {
+.kuwan .pl_wrap .pl_list .tb_list li {
   width: 120px;
   float: left;
   text-align: center;
   margin-right: 40px;
 }
 
-.pl_wrap .pl_list .tb_list li p {
+.kuwan .pl_wrap .pl_list .tb_list li p {
   margin: 5px 0 22px;
   padding-left: 10px;
 }
 
-.pl_wrap .pl_list .m_list {
+.kuwan .pl_wrap .pl_list .m_list {
   overflow: hidden;
   padding: 16px 0 20px 30px;
 }
 
-.pl_wrap .pl_list .m_list li {
+.kuwan .pl_wrap .pl_list .m_list li {
   width: 120px;
   text-align: center;
   float: left;
   margin-right: 40px;
   margin-bottom: 20px;
+}
+
+.kuwan .bx {
+  position: relative;
+}
+
+.kuwan .bx #jiazai_donghua {
+  width: 1000px;
+  height: 1185px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  top: 0;
+  display: none;
+}
+
+.kuwan .bx #jiazai_donghua i {
+  font-size: 50px;
+  margin-top: 50px;
+  animation: turn_around 2s linear infinite;
+}
+
+#kw_hot_list,
+#kw_pinlei {
+  display: none;
 }

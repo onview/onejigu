@@ -5,6 +5,7 @@ h1{
     font-size: 40px;
     color: #333;
     text-align: center;
+    font-weight: 400;
     height: 135px;
     line-height: 135px;
 }
@@ -12,14 +13,13 @@ h1{
     width: 330px;
     margin: 0 auto;
     overflow: hidden;
+    color: #999;
     li{
         width: 165px;
         text-align: center;
         float: left;
         padding-bottom: 15px;
-        a{
-            color: #999;
-        }
+        cursor: pointer;
     }
 }
 // 主页
@@ -27,7 +27,7 @@ h1{
     background-color: #f7f7f7;
     padding-bottom: 50px;
 
-    #dg_hot_list{
+    .dg_list{
         overflow: hidden;
         padding-top: 25px;
         padding-bottom: 20px;
@@ -228,5 +228,28 @@ h1{
         background: #eaeaea;
         position: absolute;
         left: 50%;
+    }
+}
+
+#dg_hot_list{
+    display: none;
+}
+.daogou .bx{
+    position: relative;
+
+    // 加载动画
+    #jiazai_donghua{
+        width: 1000px;
+        height: 1185px;
+        overflow: hidden;
+        text-align: center;
+        position: relative;
+        top: 0;
+        display: none;
+        i{
+            font-size: 50px;
+            margin-top: 50px;
+            animation: turn_around 2s linear infinite;
+        }
     }
 }

@@ -298,6 +298,9 @@ button{
     font-size: 12px;
     color: #a8a2ac;
 }
+.footer a{
+    color: #a8a2ac;
+}
 
 .footer .banquan{
     font-size: 12px;
@@ -347,4 +350,12 @@ button{
 .footer dl:nth-child(3) dd {
     float: left;
     width: 70px;
+}
+
+
+/* 加载效果 */
+@keyframes turn_around{
+    100%{
+        transform: rotate(360deg);
+    }
 }
