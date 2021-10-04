@@ -7,13 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./../css/common.css">
     <link rel="stylesheet" href="./css/guid.min.css">
+    <link rel="stylesheet" href="./../css/font-awesome.min.css">
     <title>导购-最新</title>
     <style>
-        .other_nav li:nth-child(1) {
+        .active {
             border-bottom: 4px solid #fe5631;
-        }
-
-        .other_nav li:nth-child(1) a {
             color: #fe5631;
         }
     </style>
@@ -68,12 +66,12 @@
 
     <h1>导购</h1>
     <ul class="other_nav">
-        <li><a href="./guid_index.html">最新</a></li>
-        <li><a href="./guid_hot.html">最热</a></li>
+        <li class="active">最新</li>
+        <li>最热</li>
     </ul>
     <div class="daogou">
         <div class="bx">
-            <ul id="dg_hot_list">
+            <ul id="dg_new_list" class="dg_list">
                 <!-- <li>
                     <img src="./../img/k1.jpg" alt="">
                     <div>
@@ -89,7 +87,13 @@
                     <img src="./../css/img/listbg.jpg" alt="">
                 </li> -->
             </ul>
+            <ul id="dg_hot_list" class="dg_list"></ul>
             <div id="click_more"><span id="loading_icon"></span>点击加载更多</div>
+
+            <!-- 加载动画 -->
+            <div id="jiazai_donghua">
+                <i class="fa fa-spinner"></i>
+            </div>
         </div>
     </div>
 
@@ -168,7 +172,7 @@
 <script src="./../js/template-web.js"></script>
 <script>
     var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
-    oajax.open('get', 'http://192.168.0.104:3000/guid/new', true);
+    oajax.open('get', './../json/guid.json', true);
     oajax.send();
     oajax.onreadystatechange = function () {
         // console.log(oajax.readyState);
@@ -184,14 +188,18 @@
     }
 
     function render_html(res) {
-        console.log(res);
+        // console.log(res);
 
-        var html = template('one', {
-            value: res
+        var html1 = template('one', {
+            value: res.new
         });
-        document.getElementById('dg_hot_list').innerHTML = html;
+        var html2 = template('one', {
+            value: res.hot
+        });
+        document.getElementById('dg_new_list').innerHTML = html1;
+        document.getElementById('dg_hot_list').innerHTML = html2;
     }
 </script>
 <script src="./../js/jiazai_more.js"></script>
-
+<script src="./js/guid.js"></script>
 </html>

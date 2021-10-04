@@ -5,18 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./../css/common.css">
-    <link rel="stylesheet" href="./css/guid.min.css">
-    <title>导购-最热</title>
-    <style>
-        .other_nav li:nth-child(2) {
-            border-bottom: 4px solid #fe5631;
-        }
-
-        .other_nav li:nth-child(2) a {
-            color: #fe5631;
-        }
-    </style>
+    <link rel="stylesheet" href="../css/common.css">
+    <title>公共样式</title>
 </head>
 
 <body>
@@ -40,7 +30,7 @@
             <div class="l_line"></div>
             <div class="login_right fr">
                 <p>社交网络账号登录</p>
-                <img src="./../img/login_ewm.png" alt="">
+                <img src="../img/login_ewm.png" alt="">
                 <div>
                     <span class="l_r_tubiao weibo"><span></span>微博</span>
                     <div class="l_r_line"></div>
@@ -66,39 +56,33 @@
     </div>
     <div class="nav_b_line"></div>
 
-    <h1>导购</h1>
-    <ul class="other_nav">
-        <li><a href="./guid_index.html">最新</a></li>
-        <li><a href="./guid_hot.html">最热</a></li>
-    </ul>
-    <div class="daogou">
-        <div class="bx">
-            <ul id="dg_hot_list">
-                <!-- <li>
-                    <img src="./../img/k1.jpg" alt="">
-                    <div>
-                        <span>SCiO 微型光谱仪</span>
-                        <div>
-                            <span></span>
-                            <span>
-                                <span>3</span>
-                                <span>3</span>
-                            </span>
-                        </div>
-                    </div>
-                    <img src="./../css/img/listbg.jpg" alt="">
-                </li> -->
-            </ul>
-            <div id="click_more"><span id="loading_icon"></span>点击加载更多</div>
+    <!-- 主页 试用-产品 下的图片 -->
+    <div class="nav_top_img">
+        <div class="nav_bx">
+            <div class="nt_right fr">
+                <h1 class="fr">幻响小贝HIFI2.1音箱</h1>
+                <div class="clear"></div>
+                <ul class="nav_r_list fr">
+                    <li>126人申请</li>
+                    <li>￥599</li>
+                    <li>20台</li>
+                </ul>
+                <div class="clear"></div>
+                <p class="fr">申请时间剩余：<span id="sd_time"></span></p>
+                <div class="clear"></div>
+                <button class="fr">立即申请</button>
+            </div>
         </div>
     </div>
+
+    <br><br>
 
     <!-- 最底部信息部分 -->
     <div class="footer">
         <div class="ft_bx">
             <div class="erweima"></div>
             <div class="jiguo">
-                <img src="./../img/logoImg.jpg" alt="">
+                <img src="../img/logoImg.jpg" alt="">
                 <p>全球酷玩试用导购平台酷·新奇·好玩·品质</p>
                 <p>微信添加"JguoJguo"获取我们的服务。</p>
             </div>
@@ -106,7 +90,7 @@
         </div>
         <dl>
             <dt>免费试用</dt>
-            <dd>试用流程</dd>
+            <dd><a href="#">试用流程</a></dd>
             <dd>如何提高成功率</dd>
         </dl>
         <dl>
@@ -143,55 +127,32 @@
             <dd>CEO邮箱：CEO@jiguo.com</dd>
         </dl>
     </div>
+
+
 </body>
 <script src="./../js/idnex1.js"></script>
-<script id="one" type="text/html">
-        {{each value}}
-        <li>
-            <a href="./guid_info.html"><img src="{{$value.img}}" alt=""></a>
-            <div>
-                <span>{{$value.text}}</span>
-                <p>{{$value.description}}</p>
-                <div class="img_info">
-                    <span></span>
-                    <span>
-                        <span>{{$value.like}}</span>
-                        <span>{{$value.words}}</span>
-                    </span>
-                </div>
-            </div>
-            <img src="./../css/img/listbg.jpg" alt="">
-        </li>
-        {{/each}}
-    </script>
-
-<script src="./../js/template-web.js"></script>
 <script>
-    var oajax = new XMLHttpRequest() || new ActiveXObject('Microsoft.XMLHTTP');
-    oajax.open('get', 'http://192.168.0.104:3000/guid/hot', true);
-    oajax.send();
-    oajax.onreadystatechange = function () {
-        // console.log(oajax.readyState);
-        if (oajax.readyState == 4) {
-            if (oajax.status == 200) {
-                var res = JSON.parse(oajax.responseText);
-                // console.log(res);
-                render_html(res);
-            } else {
-                console.log('获取失败');
-            }
-        }
+    var Christmas = document.getElementById('sd_time');
+    var timer_ = setInterval(function () {
+        var shengdan = new Date("2021-12-25 0:00:00");
+        var nowtime = new Date();
+        var sy = shengdan.getTime() - nowtime.getTime();
+        var d = Math.floor(sy / 1000 / 60 / 60 / 24);
+        var h = Math.floor(sy / 1000 / 60 / 60 % 24);
+        var m = Math.floor(sy / 1000 / 60 % 60);
+        var s = Math.floor(sy / 1000 % 60);
+        var shengyu = d + "天" + h + "时" + m + "分" + s + "秒";
+        Christmas.innerHTML = shengyu;
+    }, 1000)
+
+    var close_login = document.getElementsByClassName('close_')[0];
+    var login_wrap = document.getElementById('login_wrap');
+    function close_() {
+        login_wrap.style.display = 'none';
     }
-
-    function render_html(res) {
-        console.log(res);
-
-        var html = template('one', {
-            value: res
-        });
-        document.getElementById('dg_hot_list').innerHTML = html;
+    function login_show() {
+        login_wrap.style.display = 'block';
     }
 </script>
-<script src="./../js/jiazai_more.js"></script>
 
 </html>

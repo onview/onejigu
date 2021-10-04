@@ -6,6 +6,7 @@ h1 {
   font-size: 40px;
   color: #333;
   text-align: center;
+  font-weight: 400;
   height: 135px;
   line-height: 135px;
 }
@@ -14,6 +15,7 @@ h1 {
   width: 330px;
   margin: 0 auto;
   overflow: hidden;
+  color: #999;
 }
 
 .other_nav li {
@@ -21,10 +23,7 @@ h1 {
   text-align: center;
   float: left;
   padding-bottom: 15px;
-}
-
-.other_nav li a {
-  color: #999;
+  cursor: pointer;
 }
 
 .daogou {
@@ -32,13 +31,13 @@ h1 {
   padding-bottom: 50px;
 }
 
-.daogou #dg_hot_list {
+.daogou .dg_list {
   overflow: hidden;
   padding-top: 25px;
   padding-bottom: 20px;
 }
 
-.daogou #dg_hot_list li {
+.daogou .dg_list li {
   width: 220px;
   float: left;
   border: 1px solid #e8e8e8;
@@ -49,7 +48,7 @@ h1 {
   position: relative;
 }
 
-.daogou #dg_hot_list li img:nth-child(1) {
+.daogou .dg_list li img:nth-child(1) {
   border-radius: 5px;
   cursor: pointer;
   width: 220px;
@@ -58,54 +57,54 @@ h1 {
   top: 0;
 }
 
-.daogou #dg_hot_list li img:last-child {
+.daogou .dg_list li img:last-child {
   position: absolute;
   bottom: -15px;
 }
 
-.daogou #dg_hot_list li > div {
+.daogou .dg_list li > div {
   padding: 10px;
   font-size: 12px;
   margin-top: 130px;
 }
 
-.daogou #dg_hot_list li > div > span {
+.daogou .dg_list li > div > span {
   color: #444;
   font-size: 14px;
   display: block;
   height: 39px;
 }
 
-.daogou #dg_hot_list li > div p {
+.daogou .dg_list li > div p {
   font-size: 12px;
   margin-bottom: 25px;
   color: #999;
 }
 
-.daogou #dg_hot_list li > div .img_info {
+.daogou .dg_list li > div .img_info {
   color: #989898;
 }
 
-.daogou #dg_hot_list li > div .img_info > span:nth-child(1) {
+.daogou .dg_list li > div .img_info > span:nth-child(1) {
   color: #ff4c31;
   font-size: 14px;
 }
 
-.daogou #dg_hot_list li > div .img_info > span:nth-child(2) {
+.daogou .dg_list li > div .img_info > span:nth-child(2) {
   float: right;
 }
 
-.daogou #dg_hot_list li > div .img_info > span:nth-child(2) span:nth-child(1) {
+.daogou .dg_list li > div .img_info > span:nth-child(2) span:nth-child(1) {
   padding-left: 15px;
   background: url(./../../css/img/xin.png) no-repeat 0 center;
 }
 
-.daogou #dg_hot_list li > div .img_info > span:nth-child(2) span:nth-child(2) {
+.daogou .dg_list li > div .img_info > span:nth-child(2) span:nth-child(2) {
   padding-left: 15px;
   background: url(./../../css/img/reply.png) no-repeat 0 center;
 }
 
-.daogou #dg_hot_list li:not(li:nth-child(4n)) {
+.daogou .dg_list li:not(li:nth-child(4n)) {
   margin-right: 37px;
 }
 
@@ -262,4 +261,28 @@ h1 {
   background: #eaeaea;
   position: absolute;
   left: 50%;
+}
+
+#dg_hot_list {
+  display: none;
+}
+
+.daogou .bx {
+  position: relative;
+}
+
+.daogou .bx #jiazai_donghua {
+  width: 1000px;
+  height: 1185px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  top: 0;
+  display: none;
+}
+
+.daogou .bx #jiazai_donghua i {
+  font-size: 50px;
+  margin-top: 50px;
+  animation: turn_around 2s linear infinite;
 }
