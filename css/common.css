@@ -359,3 +359,16 @@ button{
         transform: rotate(360deg);
     }
 }
+
+/* 动画 */
+@keyframes shan_ {
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: .8;
+    }
+    100%{
+        opacity: 1;
+    }
+}

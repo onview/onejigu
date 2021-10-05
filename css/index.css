@@ -1,6 +1,13 @@
 h2 {
   line-height: 66px;
   font-size: 20px;
+  color: #444;
+}
+
+h2 span {
+  font-size: 12px;
+  font-weight: 400;
+  color: #fe5341;
 }
 
 .index_nav .nav_list li:nth-child(1) a {
@@ -45,6 +52,7 @@ h2 {
   border-radius: 3px;
   position: absolute;
   right: 0;
+  z-index: 9;
 }
 
 .hot_shiyong .index_lbt li .bs_sf {
@@ -104,6 +112,10 @@ h2 {
   color: #a2b391;
 }
 
+.hot_shiyong .index_lbt li:hover img:nth-of-type(1) {
+  animation: shan_ 1s linear infinite;
+}
+
 .hot_shiyong .lbt_zx {
   display: block;
   position: absolute;
@@ -131,6 +143,12 @@ h2 {
 .baogao_jx li {
   margin-bottom: 20px;
   padding-bottom: 20px;
+  transition: all .3s;
+}
+
+.baogao_jx li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 5px rgba(204, 204, 204, 0.8);
 }
 
 .daogou_jx {
@@ -140,11 +158,16 @@ h2 {
 .daogou_jx li {
   position: relative;
   padding-bottom: 15px;
+  margin-bottom: 5px;
 }
 
 .daogou_jx li img:last-child {
   position: absolute;
   bottom: -15px;
+}
+
+.daogou_jx li:hover img:nth-of-type(1) {
+  animation: shan_ 1s linear infinite;
 }
 
 .faxian_kuwan {
@@ -160,6 +183,12 @@ h2 {
   background-color: #fff;
   padding-bottom: 20px;
   margin-bottom: 20px;
+  transition: all .3s;
+}
+
+.faxian_kuwan .jx_list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 2px 5px rgba(204, 204, 204, 0.8);
 }
 
 .faxian_kuwan .jx_list li > p {
@@ -175,7 +204,6 @@ h2 {
 }
 
 .jx_list {
-  overflow: hidden;
   padding-bottom: 20px;
 }
 
