@@ -37,6 +37,10 @@ h1 {
   padding-bottom: 20px;
 }
 
+.daogou .dg_list li:hover img:nth-of-type(1) {
+  animation: shan_ 1s linear infinite;
+}
+
 .daogou .dg_list li {
   width: 220px;
   float: left;
