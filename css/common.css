@@ -341,6 +341,9 @@ button{
     color: #fff;
     margin-bottom: 30px;
 }
+.footer dl dt a{
+    color: #fff;
+}
 .footer dl dd{
     line-height: 20px;
 }
