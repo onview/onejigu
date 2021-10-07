@@ -1,5 +1,5 @@
 {
-    "new": [
+    "new":[
         {
             "img": "./..//img/hot3.jpg",
             "text": "Liquid Image 338 运动摄像眼镜",
@@ -91,7 +91,7 @@
             "words": 5
         }
     ],
-    "hot": [
+    "hot":[
         {
             "img": "./..//img/hot2.jpg",
             "text": "他用十二年找一把完美剃须刀",

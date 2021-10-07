@@ -297,6 +297,7 @@ button{
     padding-top: 40px;
     font-size: 12px;
     color: #a8a2ac;
+    overflow: hidden;
 }
 .footer a{
     color: #a8a2ac;
