@@ -113,31 +113,31 @@ h1 {
   padding-bottom: 20px;
 }
 
-.report_list li {
+.report_list li:not(.bg_about) {
   width: 700px;
   height: 410px;
-  float: left;
   border: 1px solid #eaeaea;
   border-radius: 5px;
   background-color: #fff;
   position: relative;
+  margin-bottom: 20px;
 }
 
-.report_list li > img {
+.report_list li:not(.bg_about) > img {
   cursor: pointer;
   width: 700px;
   height: 410px;
   margin-bottom: 12px;
 }
 
-.report_list li p {
+.report_list li:not(.bg_about) .r_title {
   height: 34px;
   font-size: 18px;
   margin: 25px 0 35px;
   color: #444;
 }
 
-.report_list li > div {
+.report_list li:not(.bg_about) > div {
   padding: 0 20px;
   font-size: 12px;
   width: 100%;
@@ -149,7 +149,7 @@ h1 {
   background-color: rgba(255, 255, 255, 0.85);
 }
 
-.report_list li > div img {
+.report_list li:not(.bg_about) > div img {
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -157,17 +157,17 @@ h1 {
   top: 5px;
 }
 
-.report_list li .fr span:nth-child(1) {
+.report_list li:not(.bg_about) .fr span:nth-child(1) {
   padding-left: 15px;
   background: url(../../css/img/xin.png) no-repeat 0 center;
 }
 
-.report_list li .fr span:nth-child(2) {
+.report_list li:not(.bg_about) .fr span:nth-child(2) {
   padding-left: 15px;
   background: url(../../css/img/reply.png) no-repeat 0 center;
 }
 
-.report_list li .r_about {
+.report_list .bg_about {
   width: 100%;
   height: 48px;
   line-height: 48px;
@@ -175,4 +175,5 @@ h1 {
   text-align: center;
   color: #a2a2a2;
   border: 1px solid #e6e6e6;
+  margin-bottom: 20px;
 }
