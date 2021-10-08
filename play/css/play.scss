@@ -37,11 +37,16 @@ h1{
             background-color: #fff;
             padding-bottom: 10px;
             margin-bottom: 20px;
+            transition: all .3s;
             img{
                 cursor: pointer;
                 width: 220px;
                 height: 130px;
             }
+        }
+        li:hover{
+            box-shadow: 0 2px 5px rgba($color: #ccc, $alpha: .8);
+            transform: translateY(-5px);
         }
         li>div{
             padding: 10px;
@@ -119,7 +124,7 @@ h1{
                 color: #333;
             }
             .tb_list{
-                margin-top: 35px;
+                padding-top: 35px;
                 padding-left: 30px;
                 overflow: hidden;
                 border-bottom: 1px dashed #e4e4e4;
@@ -132,6 +137,12 @@ h1{
                         margin: 5px 0 22px;
                         padding-left: 10px;
                     }
+                    img{
+                        transition: all .3s;
+                    }
+                }
+                li img:hover{
+                    transform: scale(1.2) rotate(-360deg);
                 }
             }
             .m_list{

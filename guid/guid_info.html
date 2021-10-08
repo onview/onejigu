@@ -132,16 +132,25 @@
 
             <ul class="main_right fr">
                 <li>
-                    <div>
-                        <i class="fa fa-heart-o"></i>
+                    <div class="like">
+                        <i class="fa fa-heart-o heart"></i>
                         <p>喜欢 15</p>
                     </div>
                 </li>
                 <li>
-                    <div>
+                    <div class="bshare">
+                        <div class="bshare-custom">
+                            <a title="分享到" href="http://www.bShare.cn/" id="bshare-shareto" class="bshare-more"></a>
+                            <!-- <a title="分享到QQ好友" class="bshare-qqim">QQ好友</a>
+                            <a title="分享到微信" class="bshare-weixin">微信</a>
+                            <a title="分享到QQ空间" class="bshare-qzone">QQ空间</a>
+                            <a title="分享到新浪微博" class="bshare-sinaminiblog">新浪微博</a>
+                            <a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a> -->
+                        </div>
                         <img src="./../css/img/share_yj1.png" alt="">
                         <p>分享</p>
                     </div>
+
                 </li>
                 <li class="mr_line"></li>
             </ul>
@@ -199,7 +208,26 @@
             <dd>CEO邮箱：CEO@jiguo.com</dd>
         </dl>
     </div>
+
+
+
 </body>
 <script src="./../js/idnex1.js"></script>
+<script>
+    var heart = document.getElementsByClassName('heart')[0];
+    // console.log(heart);
+    var share = document.getElementsByClassName('share')[0];
+    // console.log(share);
+    heart.onclick = function () {
+        heart.className = 'fa fa-heart heart'
+        heart.style.color = 'red';
+        // heart.style.background= 'red';
+    };
+</script>
+
+
+<script type="text/javascript" charset="utf-8"
+    src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
 
 </html>

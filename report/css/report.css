@@ -113,6 +113,14 @@ h1 {
   padding-bottom: 20px;
 }
 
+.report_list li {
+  overflow: hidden;
+}
+
+.report_list li > img {
+  transition: all .3s;
+}
+
 .report_list li:not(.bg_about) {
   width: 700px;
   height: 410px;
@@ -165,6 +173,10 @@ h1 {
 .report_list li:not(.bg_about) .fr span:nth-child(2) {
   padding-left: 15px;
   background: url(../../css/img/reply.png) no-repeat 0 center;
+}
+
+.report_list li:hover > img {
+  transform: scale(1.1);
 }
 
 .report_list .bg_about {
