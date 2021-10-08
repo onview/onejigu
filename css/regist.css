@@ -1,50 +1,86 @@
-.regist{
-    width: 800px;
-    margin: 25px auto;
-    border: 1px solid rgb(173, 173, 173);
-    border-radius: 5px;
+
+.main .center {
+  width: 1000px;
+  margin: 30px auto;
+  height: 780px;
+  border-radius: 7px;
+  border: 1px solid #ccc;
+  background-color: #ffffff;
 }
-.regist p{
-    width: 100px;
-    border-left: 4px solid orangered;
-    text-align: center;
-    margin-top: 20px;
+
+.main .center p {
+  margin-top: 30px;
 }
-.regist ul{
-    width: 400px;
-    margin: auto;
+
+.main .center p span:nth-child(1) {
+  float: left;
+  width: 6px;
+  height: 25px;
+  background-color: #ff533d;
 }
-.regist input{
-    width: 380px;
-    height: 40px;
-    border-radius: 5px;
-    border: none;
-    background-color: #f1f1f1;
-    margin-top: 20px;
-    padding-left: 20px;
+
+.main .center p span:nth-child(2) {
+  float: left;
+  margin-left: 20px;
+  color: #2b2b2b;
+  font-size: 18px;
+  margin-top: 3px;
 }
-.regist img{
-    position: relative;
-    top: 20px;
+
+.main .center .box {
+  width: 400px;
+  margin: 77px auto 0;
+  border: none;
 }
-.regist .num_yzm,.regist .tpyzm{
-    width: 230px;
+
+.main .center .box li {
+  list-style: none;
+  color: #babbc0;
+  height: 50px;
+  overflow: hidden;
 }
-.btn1{
-    margin-left: 20px;
-    width: 120px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: white;
-    color: #9e9b9b;
-    border: 1px solid #9e9b9b;
+
+.main .center .box li input {
+  width: 100%;
+  height: 100%;
+  background-color: #f7f7f7;
+  border-radius: 7px;
+  float: left;
+  font-size: 18px;
+  text-indent: 10px;
+  border: 1px solid #efefef;
 }
-.btn2{
-    width: 400px;
-    height: 40px;
-    background-color: #FE5341;
-    color: white;
-    border-radius: 5px;
-    margin:20px 0;
-    border:none;
+
+.main .center .box li span {
+  float: left;
+  margin: 8px 0 0 25px;
+}
+
+.main .center .box li div {
+  float: right;
+  width: 132px;
+  height: 48px;
+  border: 1px solid #a5a5a5;
+  border-radius: 7px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.main .center .box li:nth-child(n+2) {
+  margin-top: 30px;
+}
+
+.main .center .box li:nth-child(2) input,
+.main .center .box li:nth-child(3) input {
+  width: 245px;
+}
+
+.main .center .box li:nth-child(7) {
+  background-color: #ff533d;
+  color: #ffffff;
+  border-radius: 7px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
 }

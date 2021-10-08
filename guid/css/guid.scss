@@ -210,6 +210,18 @@ h1{
                 margin-top: 5px;
                 font-size: 12px;
             }
+            i,img{
+                cursor: pointer;
+            }
+        }
+        #bshare-shareto{
+            display: block;
+            width: 20px;
+            height: 22px;
+            position: absolute;
+            left: 50%;
+            top: -30px;
+            transform: translateX(-50%);
         }
     }
     li:nth-child(1),li:nth-child(2){

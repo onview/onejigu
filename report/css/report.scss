@@ -96,10 +96,14 @@ h1{
 }
 
 
-
 .report_list{
     padding-bottom: 20px;
-    // overflow: hidden;
+    li{
+        overflow: hidden;
+    }
+    li>img{
+        transition: all .3s;
+    }
     li:not(.bg_about){
         width: 700px;
         height: 410px;
@@ -149,6 +153,9 @@ h1{
             }
         }
 
+    }
+    li:hover>img{
+        transform: scale(1.1);
     }
     .bg_about{
         width: 100%;

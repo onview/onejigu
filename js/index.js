@@ -60,25 +60,6 @@ function automove() {
 }
 automove();
 
-lbt.addEventListener('mouseenter', function () {
-    clearInterval(timer);
-    clearInterval(timer1);
-})
-lbt.addEventListener('mouseleave', function () {
-    automove();
-})
-
-
-// document.addEventListener('visibilitychange', function () {
-//     if (document.visibilityState == 'hidden') {
-//         clearInterval(timer);
-//     }
-
-//     if (document.visibilityState == 'visible') {
-//         timer();
-//     }
-// })
-
 
 var Christmas = document.getElementById('sd_time');
 var timer_ = setInterval(function () {
