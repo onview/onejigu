@@ -63,7 +63,7 @@ automove();
 
 var Christmas = document.getElementById('sd_time');
 var timer_ = setInterval(function () {
-    var shengdan = new Date("2021-12-25 0:00:00");
+    var shengdan = new Date("2022-3-25 0:00:00");
     var nowtime = new Date();
     var sy = shengdan.getTime() - nowtime.getTime();
     var d = Math.floor(sy / 1000 / 60 / 60 / 24);
